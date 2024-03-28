@@ -1,0 +1,29 @@
+extends common/layout
+
+block layout-content 
+    h1(class="text-center main-font") Look up and learn
+    p(class="text-center sec-font") Search up any english word and find instant translations across multiple languages
+    div(class="container")
+      form(method="POST" action="/search")
+        div(class="mb-3 my-0 d-flex")
+          input(type="text" class="form-control mx-5" id="word" name="word")
+          span(class="input-group-btn")
+            button(type="submit" class="btn button-colour") 
+              svg(xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16")
+                path(d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0")
+        div(id="searchHelp" class="form-text mx-5 sec-tag") Search across multiple languages
+    hr(class="divider")
+    div(class="container")
+      div(class="row")
+        div(class="col-lg-4 ")
+          //img(class="rounded-circle" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" width="140" height="140" )
+          h2(class="main-font-2") Search 
+          p(class="sec-font-2") Explore the vast English dictionary effortlessly with online tools and search engines. Enter any word of interest to access comprehensive definitions, pronunciations, and usage examples instantly.
+        div(class="col-lg-4")
+          //img(class="rounded-circle align-items-center" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" width="140" height="140")
+          h2(class="align-items-center main-font-2") Define 
+          p(class="align-items-center sec-font-2") Unlock the power to define any word with precision using our comprehensive language tools and resources. Explore accurate and detailed definitions for a vast array of words, empowering your understanding and mastery of the English language.
+        div(class="col-lg-4")
+          //img(class="rounded-circle align-items-center" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" width="140" height="140")
+          h2(class="align-items-center main-font-2") Translate 
+          p(class="align-items-center sec-font-2") With our multilingual translation capabilities, you can seamlessly translate any word searched into six different languages. Explore a diverse range of translations, enhancing your global communication and language skills effortlessly.

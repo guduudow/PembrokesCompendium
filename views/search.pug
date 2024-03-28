@@ -1,0 +1,29 @@
+extends common/layout 
+
+block layout-content 
+  div(class="container-fluid")
+    if dict
+      div(class="container-fluid mt-4")
+        h2(class="text-center") Word: #{dict.word}
+        h3 Definition(s):
+        ul(class="list-group mt-3")
+          each meaning in dict.meanings
+            li(class="list-group-item def-sec") As a (#{meaning.partOfSpeech}:) #{meaning.definitions[0].definition}
+      div(class="mt-4")
+        h2 "#{dict.word}" in other languages: 
+        div(class="container-fluid")
+          ul(class="list-group mt-3")
+            li(class="list-group-item px-3 def-sec") #{french}
+              img(src="images/frenchflag.svg" width="75" height="75" class="px-3") 
+            li(class="list-group-item px-3 def-sec") #{german}
+              img(src="images/germanflag.svg" width="75" height="75" class="px-3")
+            li(class="list-group-item px-3 def-sec") #{russian}
+              img(src="images/russianflag.svg" width="75" height="75" class="px-3")
+            li(class="list-group-item px-3 def-sec") #{spanish}
+              img(src="images/spanishflag.svg" width="75" height="75" class="px-3")
+            li(class="list-group-item px-3 def-sec") #{arabic}
+              img(src="images/arableague.svg" width="75" height="75" class="px-3")
+            li(class="list-group-item px-3 def-sec") #{somali}
+              img(src="images/somaliflag.svg" width="75" height="75" class="px-3")
+            li(class="list-group-item px-3 def-sec") #{hindi}
+              img(src="images/indianflag.svg" width="75" height="75" class="px-3")
